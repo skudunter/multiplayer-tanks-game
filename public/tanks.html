@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Tanks</title>
+    <meta name="description" content="" />
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/gradients.css" rel="stylesheet">
+
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.sound.min.js"></script>
+    <script src="js/StartAudioContext.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="js/tank.js"></script>
+    <script src="js/shot.js"></script>
+    <script src="js/buzzsaw.js"></script>
+    <script src="js/client.js"></script>    
+</head>
+    <body>
+        <form action="/GetEm" method="post">
+            <div class="row">
+                <div class="block">
+                    <h1>Express Tanks</h1>
+                </div>
+                <div class="block">
+                    <div style="width: 100px"></div>
+                </div>
+                <div class="block">
+                    <input onclick="Restart()" type="button" value="Restart">
+                </div>
+                <div class="block">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="soundOnOff">
+                        <label class="onoffswitch-label" for="soundOnOff">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>                            
+                </div>
+            </div>
+
+            <input id="playerName" name="PlayerName" type="hidden" value="<%= PlayerName %>" />
+            <div id="sketch-holder">
+                <!-- Our sketch will go here! -->
+            </div>
+            </form>
+
+        <footer>
+            <p class="footer-contents">Developed with <span style="color:red">♥</span> by CSCI-333 :: Computer Networking</p>
+            <p class="footer-contents">Copyright ©2019 BrettHuffman.com All Rights Reserved</p>
+        </footer>
+        <script src="js/set-background.js"></script>
+
+    </body>
+</html>

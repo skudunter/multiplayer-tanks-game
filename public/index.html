@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Tanks</title>
+    <meta name="description" content="" />
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/gradients.css" rel="stylesheet">
+    <script src="js/p5.min.js"></script>
+
+    <style>
+        .butn {
+            background: #6a899e;
+            background-image: -webkit-linear-gradient(top, #6a899e, #41525c);
+            background-image: -moz-linear-gradient(top, #6a899e, #41525c);
+            background-image: -ms-linear-gradient(top, #6a899e, #41525c);
+            background-image: -o-linear-gradient(top, #6a899e, #41525c);
+            background-image: linear-gradient(to bottom, #6a899e, #41525c);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            font-family: Arial;
+            color: #aaaaaa;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+
+        .butn:hover {
+            background: #6a899e;
+            background-image: -webkit-linear-gradient(top, #6a899e, #41525c);
+            background-image: -moz-linear-gradient(top, #6a899e, #41525c);
+            background-image: -ms-linear-gradient(top, #6a899e, #41525c);
+            background-image: -o-linear-gradient(top, #6a899e, #41525c);
+            background-image: linear-gradient(to bottom, #6a899e, #41525c);
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+    <body onload="document.getElementById('PlayerName').focus();">
+        <form action="/GetEm" method="post">
+            <center>
+            <div style="transform: rotate(0deg); width: 840px; height: 800px;">
+                <img src="img/ETBanner.png" />
+                <div style="position: absolute; top: 280px; left: 40px; width: 380px">
+                    <input id="PlayerName" maxlength="12" type="text" name="PlayerName" style="font-size: 18pt">
+                    <input type="submit" value="Start" class="butn">
+                </div>
+            </div>
+            </center>
+        </form>
+
+        <footer>
+            <p class="footer-contents">Developed with <span style="color:red">♥</span> by CSCI-333 :: Computer Networking</p>
+            <p class="footer-contents">Copyright ©2019 BrettHuffman.com All Rights Reserved</p>
+        </footer>
+        <script src="js/set-background.js"></script>
+    </body>
+</html>
